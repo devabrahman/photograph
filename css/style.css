@@ -45,7 +45,7 @@ button:focus {
 \*-------------------*/
 body {
   font-family: var(--primary-fonts);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 .container {
   max-width: 1180px;
@@ -53,7 +53,7 @@ body {
 }
 .btn {
   background-color: var(--btn-color);
-  color: transparent;
+  color: var(--primary-color);
   transition: all linear 0.3s;
   font-family: var(--secondary-fonts);
 }
@@ -62,6 +62,9 @@ body {
 }
 .space {
   padding: 50px 0;
+}
+.narrow_padding {
+  margin: 0 35px;
 }
 
 /* ------------------*\
@@ -87,4 +90,56 @@ nav ul li:nth-child(6) a {
 nav ul li a {
   color: var(--text-heading-color);
   font-weight: 600;
+}
+
+/* ------------------*\
+    Hero Section
+\*-------------------*/
+.hero_section {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+.hero_text h1 {
+  font-size: 52px;
+  line-height: 72px;
+  font-weight: 700;
+}
+.hero_text p {
+  padding: 16px 0;
+  line-height: 24px;
+}
+.hero_text a {
+  margin-top: 13px;
+  display: inline-block;
+  padding: 10px 24px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.hero_text a i {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.hero_img img {
+  max-width: 440px;
+}
+
+/* ------------------*\
+    Brand logo Section
+\*-------------------*/
+.brand_logo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-top: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(60 55 55 / 49%) 52%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  border-bottom: 1px solid;
+  border-image-slice: 1;
 }
