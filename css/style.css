@@ -58,8 +58,14 @@ body {
   transition: all linear 0.3s;
   font-family: var(--secondary-fonts);
 }
+.btn i {
+  transition: all linear 0.3s;
+}
 .btn:hover {
   background-color: var(--btn-hover-color);
+}
+.btn:hover i {
+  transform: translateX(5px);
 }
 .space {
   padding: 50px 0;
@@ -78,6 +84,13 @@ header {
 .logo a {
   color: var(--text-heading-color);
   font: 600 24px var(--primary-fonts);
+}
+nav {
+  display: flex;
+  gap: 25px;
+}
+.responsive_nav {
+  display: none;
 }
 nav ul {
   display: flex;
@@ -122,7 +135,12 @@ nav ul li a {
 }
 
 .hero_img img {
+  transition: all linear 0.3s;
   max-width: 440px;
+  border-radius: 600px;
+}
+.hero_img:hover img {
+  transform: scale(1.1);
 }
 
 /* ------------------*\
@@ -142,6 +160,13 @@ nav ul li a {
   );
   border-bottom: 1px solid;
   border-image-slice: 1;
+  flex-wrap: wrap;
+}
+.brand_logo img:hover {
+  transform: scale(1.1);
+}
+.brand_logo img {
+  transition: all linear 0.2s;
 }
 /* ------------------*\
     Collectin Section
@@ -167,11 +192,13 @@ nav ul li a {
 .single_products img {
   width: 100%;
 }
-.single_products > h2 {
+.single_products > a {
   font-weight: 500;
   font-size: 28px;
   line-height: 40px;
   padding: 5px 0 5px;
+  text-transform: capitalize;
+  color: var(--text-heading-color);
 }
 .single_products > h3 {
   font-weight: 400;
@@ -207,12 +234,16 @@ nav ul li a {
   color: var(--btn-color);
   transition: all linear 0.2s;
 }
+.seemore:hover i {
+  transform: translateX(5px);
+}
 .seemore:hover {
   color: var(--btn-hover-color);
 }
 .seemore i {
   padding-right: 10px;
   font-size: 15px;
+  transition: all linear 0.3s;
 }
 /* ------------------*\
     Contact us Section
@@ -257,10 +288,10 @@ nav ul li a {
 .contact > form input {
   display: block;
   border: none;
-  width: 100%;
   border-bottom: 1px solid;
   padding-top: 10px;
   width: 100%;
+  padding-left: 15px;
 }
 .massage {
   padding-top: 60px;
@@ -270,6 +301,7 @@ nav ul li a {
   width: inherit;
   border: none;
   border-bottom: 1px solid;
+  padding-left: 15px;
 }
 
 .contact > form button {
@@ -318,4 +350,116 @@ footer ul li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ------------------*\
+    Responsive
+\*-------------------*/
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
+  .narrow_padding {
+    margin: 0;
+  }
+  header {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .logo {
+    order: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo a {
+    font-size: 16px;
+  }
+  nav {
+    align-items: center;
+  }
+  .responsive_nav {
+    display: inline-block;
+    color: var(--text-heading-color);
+  }
+  nav .main_manu {
+    display: none;
+  }
+  .cart {
+    position: absolute;
+    right: 5%;
+  }
+  .hero_section {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+  .hero_text {
+    order: 2;
+  }
+  .hero_text h1 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .hero_text p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .hero_img img {
+    width: 90%;
+  }
+  /* brand section */
+  .brand_logo {
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .brand_logo img {
+    width: 20%;
+  }
+  /* collection */
+  .collection {
+    padding: 0;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+  /* contact */
+  .contact {
+    flex-direction: column;
+  }
+  .form_text {
+    width: auto;
+    text-align: center;
+  }
+  .form_text h1 {
+    font-size: 35px;
+    line-height: 1;
+  }
+  .form_text p {
+    font-size: 14px;
+  }
+  .form_text ul {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .contact > form {
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .contact > form .name,
+  .contact > form .email {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .contact > form button {
+    margin: 30px 0;
+  }
+}
+/* Tablate view */
+@media only screen and (max-width: 600px) {
 }
