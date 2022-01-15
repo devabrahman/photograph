@@ -461,7 +461,7 @@ footer ul li a {
   }
 }
 /* Tablate view */
-@media only screen and (max-width: 760px) and (min-width: 600px) {
+@media only screen and (max-width: 770px) and (min-width: 600px) {
   .container {
     max-width: 90%;
     overflow: hidden;
@@ -565,7 +565,7 @@ footer ul li a {
     margin: 30px 0;
   }
 }
-@media only screen and (max-width: 1200px) and (min-width: 760px) {
+@media only screen and (max-width: 1200px) and (min-width: 771px) {
   .container {
     max-width: 90%;
   }
