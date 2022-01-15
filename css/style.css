@@ -1,0 +1,61 @@
+/* ------------------*\
+    Common Css
+\*-------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input:focus,
+button:focus {
+  outline: none;
+}
+/* ------------------*\
+    Custom Fonts
+\*-------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap");
+
+/* ------------------*\
+    Variables 
+\*-------------------*/
+
+:root {
+  /* colors */
+  --primary-color: #fff;
+  --text-heading-color: #3a3a3a;
+  --text-paragraph-color: #787885;
+  --body-color: #3a3a3a;
+  --btn-color: #f9440a;
+  --btn-hover-color: #de2800;
+  --icon-border-color: #22213c;
+  --footer-background: #0a0826;
+
+  /* fonts */
+  --primary-fonts: "Poppins", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+}
+
+/* ------------------*\
+    Common Class
+\*-------------------*/
+body {
+  font-family: var(--primary-fonts);
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.btn {
+  background-color: var(--btn-color);
+  color: transparent;
+  transition: all linear 0.3s;
+  font-family: var(--secondary-fonts);
+}
+.btn:hover {
+  background-color: var(--btn-hover-color);
+}
