@@ -10,6 +10,7 @@ ul {
 }
 a {
   text-decoration: none;
+  /* color: #3a3a3a; */
 }
 input:focus,
 button:focus {
@@ -29,7 +30,6 @@ button:focus {
   --primary-color: #fff;
   --text-heading-color: #3a3a3a;
   --text-paragraph-color: #787885;
-  --body-color: #3a3a3a;
   --btn-color: #f9440a;
   --btn-hover-color: #de2800;
   --icon-border-color: #22213c;
@@ -45,6 +45,7 @@ button:focus {
 \*-------------------*/
 body {
   font-family: var(--primary-fonts);
+  color: var(--primary-color);
 }
 .container {
   max-width: 1180px;
@@ -58,4 +59,32 @@ body {
 }
 .btn:hover {
   background-color: var(--btn-hover-color);
+}
+.space {
+  padding: 50px 0;
+}
+
+/* ------------------*\
+    Header Section
+\*-------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo a {
+  color: var(--text-heading-color);
+  font: 600 24px var(--primary-fonts);
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+nav ul li:nth-child(5) a,
+nav ul li:nth-child(6) a {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+nav ul li a {
+  color: var(--text-heading-color);
+  font-weight: 600;
 }
