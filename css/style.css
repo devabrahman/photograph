@@ -214,3 +214,36 @@ nav ul li a {
   padding-right: 10px;
   font-size: 15px;
 }
+footer {
+  background: var(--footer-background);
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer h1 {
+  font-size: 30px;
+  line-height: 38px;
+  padding-bottom: 5px;
+}
+footer p {
+  font-size: 14px;
+  line-height: 24px;
+}
+footer ul {
+  padding-top: 20px;
+}
+footer ul li a {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  background-color: var(--icon-border-color);
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
